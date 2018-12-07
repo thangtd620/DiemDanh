@@ -1,0 +1,10 @@
+.container{
+    border: 2px solid slategrey;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    width: 30%;     
+    /* background-color: red; */
+}
+.container p{
+    text-align: center;
+}

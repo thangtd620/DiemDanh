@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./js/angular.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script> -->
+    <script src="./rollCallContro.js"></script>
+    <link rel="stylesheet" href="custom.css">
+    <title>Document</title>
+    <!-- <style>
+    #HTC101{
+        color: red;
+    }
+    </style> -->
+</head>
+
+<body>
+    <!-- <button onclick="hamgido()">bam vao day</button>
+    <input type="text">  -->
+    <div ng-app="myApp" ng-controller="myCtrl">
+        <input type="text" ng-model="textID" placeholder='nhap id' >
+        <input type="button" value="bam vao day" ng-click ="doiMau()">
+        <div style="width: 50%; display: inline-block; float:left;">
+            <div class="container" style="float: left;" ng-repeat="st in listStudentsL | filter:textID">
+                <!--= (listStudents |filter:textSearch)-->
+                <p id="{{st.code}}">{{st.code}}</p>
+                <p>{{st.name}}</p>
+            </div>
+        </div>
+        <!-- <div style="width: 50%; display: inline-block;">
+            <div class="container" style="float: left;" ng-repeat="st in listStudentsR">
+                
+                <p>{{st.code}}</p>
+                <p>{{st.name}}</p>
+            </div>
+        </div>  -->
+        <!-- <p ng-repeat="st in listStudents">{{st.name}}</p>
+    </div>
+
+</body>
+</html>
