@@ -2,9 +2,13 @@
     border: 2px solid slategrey;
     margin-right: 5px;
     margin-bottom: 5px;
-    width: 30%;     
+    width: 30%;    
+    float: left; 
     /* background-color: red; */
 }
 .container p{
     text-align: center;
+    }
+.red{
+    background-color: red;
 }

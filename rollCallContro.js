@@ -74,7 +74,7 @@ var app = angular.module('myApp', []);
 
             },
             {
-                code: "HTC108",
+                code: "HTC109",
                 name: "Ngễn Thị Vân Anh",
                 position: "NV",
                 envelope: "congpc@thanhcong.vn",
@@ -83,7 +83,7 @@ var app = angular.module('myApp', []);
 
             },
             {
-                code: "HTC108",
+                code: "HTC110",
                 name: "Nguyễn Văn Quyết",
                 position: "bảo vệ",
                 envelope: "congpc@thanhcong.vn",
@@ -92,7 +92,7 @@ var app = angular.module('myApp', []);
 
             },
             {
-                code: "trống",
+                code: "HTC111",
                 name: "trống",
                 position: "bảo vệ",
                 envelope: "congpc@thanhcong.vn",
@@ -101,7 +101,7 @@ var app = angular.module('myApp', []);
 
             },
             {
-                code: "HTC108",
+                code: "HTC112",
                 name: "Nguyễn Văn Quyết2",
                 position: "bảo vệ",
                 envelope: "congpc@thanhcong.vn",
@@ -184,7 +184,7 @@ var app = angular.module('myApp', []);
 
             },
             {
-                code: "HTC108",
+                code: "HTC109",
                 name: "Ngễn Thị Vân Anh",
                 position: "NV",
                 envelope: "congpc@thanhcong.vn",
@@ -193,7 +193,7 @@ var app = angular.module('myApp', []);
 
             },
             {
-                code: "HTC108",
+                code: "HTC110",
                 name: "Nguyễn Văn Quyết",
                 position: "bảo vệ",
                 envelope: "congpc@thanhcong.vn",
@@ -202,8 +202,11 @@ var app = angular.module('myApp', []);
 
             }
         ];
-        $scope.doiMau=function(){
-            console.log($scope.textID);
-            
+        $scope.doiMau=function($index){
+            //var id=event.target.id
+            var id='#sv'+$index;
+            console.log(id);
+            var myEl = angular.element( document.querySelector(id) );
+            myEl.addClass('red');
         }
     });

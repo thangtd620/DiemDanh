@@ -21,12 +21,10 @@
     <!-- <button onclick="hamgido()">bam vao day</button>
     <input type="text">  -->
     <div ng-app="myApp" ng-controller="myCtrl">
-        <input type="text" ng-model="textID" placeholder='nhap id' >
-        <input type="button" value="bam vao day" ng-click ="doiMau()">
         <div style="width: 50%; display: inline-block; float:left;">
-            <div class="container" style="float: left;" ng-repeat="st in listStudentsL | filter:textID">
+            <div class="container" id="sv{{$index}}" ng-repeat="st in listStudentsL" ng-click ="doiMau($index)">
                 <!--= (listStudents |filter:textSearch)-->
-                <p id="{{st.code}}">{{st.code}}</p>
+                <p>{{st.code}}</p>
                 <p>{{st.name}}</p>
             </div>
         </div>
